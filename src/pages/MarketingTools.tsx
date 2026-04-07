@@ -90,20 +90,7 @@ const categories: ToolCategory[] = [
         href: `${BASE}url-shortener.html`,
         type: "html",
       },
-      {
-        name: "딥링크 가이드",
-        description: "딥링크 설정 가이드 및 테스트",
-        icon: <Globe className="w-5 h-5" />,
-        href: `${BASE}blog-deeplink-guide.html`,
-        type: "html",
-      },
-      {
-        name: "딥링크 가이드 (지역별)",
-        description: "지역별 딥링크 설정 가이드",
-        icon: <Globe className="w-5 h-5" />,
-        href: `${BASE}blog-deeplink-guide-geo.html`,
-        type: "html",
-      },
+
     ],
   },
 ];
