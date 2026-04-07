@@ -46,9 +46,8 @@ const categories: ToolCategory[] = [
         name: "TOP 50 리포트 자동화",
         description: "TOP 50 리포트를 자동으로 생성",
         icon: <FileText className="w-5 h-5" />,
-        href: "#",
-        type: "local",
-        badge: "준비중",
+        href: "https://top50-report.onrender.com",
+        type: "external",
       },
       {
         name: "TV INDEX 랭킹 자동화",
