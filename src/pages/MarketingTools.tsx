@@ -15,6 +15,8 @@ interface ToolCategory {
   tools: Tool[];
 }
 
+const BASE = import.meta.env.BASE_URL;
+
 const categories: ToolCategory[] = [
   {
     title: "콘텐츠 제작",
@@ -46,7 +48,7 @@ const categories: ToolCategory[] = [
         icon: <FileText className="w-5 h-5" />,
         href: "#",
         type: "local",
-        badge: "로컬",
+        badge: "준비중",
       },
       {
         name: "TV INDEX 랭킹 자동화",
@@ -54,7 +56,7 @@ const categories: ToolCategory[] = [
         icon: <Tv className="w-5 h-5" />,
         href: "#",
         type: "local",
-        badge: "로컬",
+        badge: "준비중",
       },
     ],
   },
@@ -73,9 +75,8 @@ const categories: ToolCategory[] = [
         name: "경쟁사 블로그 분석",
         description: "경쟁사 블로그 콘텐츠 갭 분석 리포트",
         icon: <Search className="w-5 h-5" />,
-        href: "/blog-content-gap-analysis.html",
+        href: `${BASE}blog-content-gap-analysis.html`,
         type: "html",
-        badge: "로컬",
       },
     ],
   },
@@ -87,25 +88,22 @@ const categories: ToolCategory[] = [
         name: "URL 축약 도구",
         description: "긴 URL을 짧게 줄여서 공유",
         icon: <Link2 className="w-5 h-5" />,
-        href: "#",
-        type: "local",
-        badge: "로컬",
+        href: `${BASE}url-shortener.html`,
+        type: "html",
       },
       {
         name: "딥링크 가이드",
         description: "딥링크 설정 가이드 및 테스트",
         icon: <Globe className="w-5 h-5" />,
-        href: "/blog-deeplink-guide.html",
+        href: `${BASE}blog-deeplink-guide.html`,
         type: "html",
-        badge: "로컬",
       },
       {
         name: "딥링크 가이드 (지역별)",
         description: "지역별 딥링크 설정 가이드",
         icon: <Globe className="w-5 h-5" />,
-        href: "/blog-deeplink-guide-geo.html",
+        href: `${BASE}blog-deeplink-guide-geo.html`,
         type: "html",
-        badge: "로컬",
       },
     ],
   },
@@ -113,7 +111,6 @@ const categories: ToolCategory[] = [
 
 const badgeStyles: Record<string, string> = {
   "준비중": "bg-amber-50 text-amber-700 border-amber-200",
-  "로컬": "bg-blue-50 text-blue-700 border-blue-200",
 };
 
 const typeIcon = (type: Tool["type"]) => {
@@ -201,7 +198,7 @@ const MarketingTools = () => {
           <div className="flex flex-wrap gap-6 text-[12px] text-gray-400">
             <span className="flex items-center gap-1.5"><ExternalLink className="w-3.5 h-3.5" /> 외부 서비스</span>
             <span className="flex items-center gap-1.5"><FileText className="w-3.5 h-3.5" /> HTML 페이지</span>
-            <span className="flex items-center gap-1.5"><Monitor className="w-3.5 h-3.5" /> 로컬 실행</span>
+            <span className="flex items-center gap-1.5"><Monitor className="w-3.5 h-3.5" /> 준비중</span>
           </div>
         </div>
       </main>
