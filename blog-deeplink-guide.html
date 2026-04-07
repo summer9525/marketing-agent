@@ -1,0 +1,153 @@
+<div style="font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1d27;line-height:1.85;font-size:15px;max-width:740px;margin:0 auto;">
+
+<p>안녕하세요, 디파이너리입니다.</p>
+<p>앱 마케팅을 하다 보면 <strong>"딥링크를 설정해주세요"</strong>라는 말을 자주 듣게 됩니다. 그런데 막상 딥링크를 파고들면 URI 스킴, 유니버셜 링크, 앱링크… 비슷해 보이는 용어들이 쏟아져 나옵니다.</p>
+<p>이 글에서는 딥링크의 개념부터 세 가지 방식의 차이, 그리고 실무에서 어떻게 활용해야 하는지까지 한 번에 정리해드리겠습니다.</p>
+
+<h2 style="font-size:19px;font-weight:700;margin:32px 0 16px;padding-top:20px;border-top:1px solid #e2e4ea">딥링크(Deeplink)란?</h2>
+<p>웹에서 <code style="background:#f0f1f5;padding:2px 6px;border-radius:3px;font-size:13px">https://igaworks.com</code>을 입력하면 아이지에이웍스 홈페이지로 이동하듯, 모바일 앱에서도 특정 주소를 통해 <strong>앱을 실행하거나 앱 내 특정 화면으로 바로 이동</strong>시킬 수 있습니다. 이것이 딥링크입니다.</p>
+<p>딥링크가 적용되면 광고를 클릭한 고객은 앱이 바로 열리면서 원하는 상품 페이지로 이동하게 됩니다. 앱이 설치되어 있지 않다면 마켓으로 이동해 설치 후 해당 페이지로 연결되는 '지연된 딥링크(Deferred Deeplink)'도 가능합니다.</p>
+<p>즉, 딥링크는 <strong>광고 성과를 극대화하기 위해 반드시 활용해야 하는 기능</strong>입니다.</p>
+
+<div style="background:#f0f1f5;border-radius:8px;padding:20px 24px;margin:20px 0">
+<p style="font-weight:600;margin-bottom:10px">📌 딥링크 3가지 방식 한눈에 보기</p>
+<table style="width:100%;border-collapse:collapse;margin:0;font-size:13px">
+<thead><tr>
+  <th style="background:#e2e4ea;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600;width:140px">방식</th>
+  <th style="background:#e2e4ea;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">제공</th>
+  <th style="background:#e2e4ea;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">원리</th>
+  <th style="background:#e2e4ea;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">한계</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea;font-weight:600">URI 스킴</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">공통 (iOS/Android)</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">앱 고유 스킴값으로 실행<br><code style="font-size:12px">twitter://signup</code></td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">스킴값 중복 가능성</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea;font-weight:600">앱링크 (App Link)</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">Android</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">도메인 주소로 앱 실행<br><code style="font-size:12px">https://example.com/path</code></td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">구글 앱 외 일부 미지원</td></tr>
+<tr><td style="padding:9px 13px;font-weight:600">유니버셜 링크</td><td style="padding:9px 13px">iOS</td><td style="padding:9px 13px">도메인 주소로 앱 실행<br><code style="font-size:12px">https://example.com/path</code></td><td style="padding:9px 13px">애플 앱 외 일부 미지원</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div style="font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1d27;line-height:1.85;font-size:15px;max-width:740px;margin:0 auto;">
+
+<h2 style="font-size:19px;font-weight:700;margin:32px 0 16px;padding-top:20px;border-top:1px solid #e2e4ea">1. URI 스킴 방식 — 가장 기본적인 딥링크</h2>
+
+<h3 style="font-size:16px;font-weight:600;margin:20px 0 10px;color:#4f5adb">어떻게 작동하나요?</h3>
+<p>URI 스킴은 앱마다 고유한 스킴(Scheme) 값을 등록해두고, 해당 값을 호출하면 앱이 열리는 방식입니다.</p>
+<p>구조는 간단합니다:</p>
+<div style="background:#f0f1f5;border-radius:8px;padding:16px 20px;margin:14px 0;font-family:monospace;font-size:14px">
+<strong>Scheme://Path</strong><br>
+<span style="color:#6b7085">Scheme</span> = 앱을 특정 (예: <code>twitter</code>)<br>
+<span style="color:#6b7085">Path</span> = 앱 내 화면을 특정 (예: <code>signup</code>)
+</div>
+<p>트위터 앱을 열고 싶다면 <code style="background:#f0f1f5;padding:2px 6px;border-radius:3px;font-size:13px">twitter://</code>, 트위터의 회원가입 화면으로 바로 가고 싶다면 <code style="background:#f0f1f5;padding:2px 6px;border-radius:3px;font-size:13px">twitter://signup</code>을 호출하면 됩니다.</p>
+
+<h3 style="font-size:16px;font-weight:600;margin:20px 0 10px;color:#4f5adb">URI 스킴의 한계</h3>
+<p>앱 수가 적던 시절에는 문제가 없었지만, 앱이 폭발적으로 늘어나면서 <strong>스킴값이 중복되는 문제</strong>가 발생했습니다.</p>
+<p>대표적인 예로, 구글플레이·원스토어·삼성 앱스토어가 모두 <code style="background:#f0f1f5;padding:2px 6px;border-radius:3px;font-size:13px">market://</code>이라는 동일한 스킴값을 사용합니다. 이 경우 사용자에게 "어떤 앱으로 열까요?"라는 선택 팝업이 뜨게 되죠.</p>
+<p>개발자 입장에서는 자신이 등록한 스킴값이 다른 앱과 중복되는지 확인할 방법도, 막을 방법도 없습니다. 이 문제를 근본적으로 해결하기 위해 등장한 것이 바로 <strong>유니버셜 링크와 앱링크</strong>입니다.</p>
+
+<h2 style="font-size:19px;font-weight:700;margin:32px 0 16px;padding-top:20px;border-top:1px solid #e2e4ea">2. 유니버셜 링크 &amp; 앱링크 — 도메인 기반 딥링크</h2>
+
+<h3 style="font-size:16px;font-weight:600;margin:20px 0 10px;color:#4f5adb">핵심 아이디어</h3>
+<p>인터넷 도메인 주소는 전 세계에서 고유합니다. <code style="background:#f0f1f5;padding:2px 6px;border-radius:3px;font-size:13px">igaworks.com</code>은 아이지에이웍스만, <code style="background:#f0f1f5;padding:2px 6px;border-radius:3px;font-size:13px">dfinery.io</code>는 디파이너리만 사용할 수 있죠.</p>
+<p>애플과 구글은 이 <strong>고유한 도메인 주소를 딥링크 실행값으로 사용</strong>하기로 했습니다. 스마트폰 브라우저에서 <code style="background:#f0f1f5;padding:2px 6px;border-radius:3px;font-size:13px">https://naver.com</code>을 입력하면 네이버 앱이 바로 열리는 방식입니다.</p>
+<ul style="margin:12px 0 12px 20px">
+  <li><strong>iOS</strong>에서는 이를 <strong>유니버셜 링크(Universal Link)</strong>라고 부릅니다.</li>
+  <li><strong>Android</strong>에서는 <strong>앱링크(App Link)</strong>라고 부릅니다.</li>
+</ul>
+<p>도메인은 고유하기 때문에 URI 스킴처럼 중복 문제가 발생하지 않습니다.</p>
+
+<h3 style="font-size:16px;font-weight:600;margin:20px 0 10px;color:#4f5adb">그런데, 이것도 완벽하진 않습니다</h3>
+<p>유니버셜 링크와 앱링크가 <strong>모든 앱 환경에서 동작하는 것은 아닙니다.</strong> 디파이너리 팀에서 주요 환경별로 직접 테스트한 결과를 공유합니다.</p>
+
+<p style="font-weight:600;margin:20px 0 8px">📱 Android 앱링크 테스트 결과</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px;margin:0 0 20px">
+<thead><tr>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600;width:30px">#</th>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">테스트 환경</th>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">결과</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">1</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">카메라 앱 QR 코드 촬영</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">기본 브라우저 설정에 따라 URI스킴 / 앱링크 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">2</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">Gmail 앱에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">기본 브라우저 설정에 따라 URI스킴 / 앱링크 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">3</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">카카오톡에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">URI스킴 방식 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">4</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">네이버 앱에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">앱링크 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">5</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">크롬 주소창에 직접 입력</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea;color:#dc3545">딥링크 동작하지 않음</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">6</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">크롬에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">앱링크 작동</td></tr>
+<tr><td style="padding:9px 13px">7</td><td style="padding:9px 13px">삼성 브라우저에서 링크 클릭</td><td style="padding:9px 13px">Android 버전에 따라 URI스킴 / 앱링크 작동</td></tr>
+</tbody>
+</table>
+
+<p style="font-weight:600;margin:20px 0 8px">🍎 iOS 유니버셜 링크 테스트 결과</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px;margin:0 0 20px">
+<thead><tr>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600;width:30px">#</th>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">테스트 환경</th>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">결과</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">1</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">사파리 주소창에 직접 입력</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">URI스킴 방식 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">2</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">사파리에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">유니버셜 링크 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">3</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">카메라 앱 QR 코드 촬영</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">유니버셜 링크 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">4</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">이메일 앱에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">유니버셜 링크 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">5</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">Gmail 앱에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">유니버셜 링크 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">6</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">카카오톡에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">URI스킴 방식 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">7</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">네이버 앱에서 링크 클릭</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">유니버셜 링크 작동</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">8</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">크롬 주소창에 직접 입력</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">URI스킴 방식 작동</td></tr>
+<tr><td style="padding:9px 13px">9</td><td style="padding:9px 13px">크롬에서 링크 클릭</td><td style="padding:9px 13px">유니버셜 링크 작동</td></tr>
+</tbody>
+</table>
+
+<p>결과를 보면 <strong>하나의 방식만으로는 모든 환경에 대응할 수 없다</strong>는 것이 명확합니다. 카카오톡에서는 URI 스킴만 작동하고, 네이버 앱에서는 앱링크/유니버셜 링크가 작동하는 식이죠.</p>
+
+</div>
+
+<div style="font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1d27;line-height:1.85;font-size:15px;max-width:740px;margin:0 auto;">
+
+<h2 style="font-size:19px;font-weight:700;margin:32px 0 16px;padding-top:20px;border-top:1px solid #e2e4ea">3. 디파이너리 All-Link — 세 가지를 하나로</h2>
+<p>URI 스킴, 유니버셜 링크, 앱링크 중 어느 하나만으로는 모든 환경을 커버할 수 없습니다. 그래서 디파이너리는 <strong>세 가지 방식을 하나의 트래킹 링크로 통합한 All-Link</strong> 기능을 제공합니다.</p>
+
+<div style="background:#f0f1f5;border-radius:8px;padding:20px 24px;margin:16px 0">
+<p style="font-weight:600;margin-bottom:10px">All-Link 작동 원리</p>
+<ol style="margin:4px 0 0 18px;font-size:13.5px">
+  <li>유니버셜 링크 / 앱링크가 지원되는 환경 → <strong>우선 실행</strong></li>
+  <li>지원되지 않는 환경 → <strong>자동으로 URI 스킴 방식으로 전환</strong></li>
+  <li>앱 미설치 상태 → <strong>마켓 이동 후 지연된 딥링크로 특정 화면 연결</strong></li>
+</ol>
+</div>
+
+<p>마케터는 딥링크 방식별 호환성을 일일이 신경 쓸 필요 없이, 디파이너리 트래킹 링크 하나만 발급하면 됩니다. 어떤 환경에서든 고객이 광고를 클릭하면 앱이 열리고, 의도한 화면으로 정확히 이동합니다.</p>
+
+<h2 style="font-size:19px;font-weight:700;margin:32px 0 16px;padding-top:20px;border-top:1px solid #e2e4ea">실무 체크리스트: 딥링크 설정 전 확인할 것</h2>
+<p>딥링크는 디파이너리가 '문을 여는 역할'을 하지만, '열쇠'는 앱 자체에 먼저 설정되어 있어야 합니다.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px;margin:14px 0">
+<thead><tr>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600;width:30px">✅</th>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">항목</th>
+  <th style="background:#f0f1f5;padding:10px 13px;text-align:left;border-bottom:2px solid #d0d2d8;font-weight:600">담당</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">1</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">앱 내 URI 스킴값 등록 (Scheme + Path)</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">앱 개발팀</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">2</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">Android 앱링크 도메인 등록 (AndroidManifest.xml)</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">앱 개발팀</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">3</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">iOS 유니버셜 링크 도메인 등록 (Associated Domains)</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">앱 개발팀</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">4</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">개발팀에서 스킴값·도메인 정보 전달받기</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">마케터</td></tr>
+<tr><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">5</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">디파이너리 트래킹 링크에 딥링크 설정값 입력</td><td style="padding:9px 13px;border-bottom:1px solid #e2e4ea">마케터</td></tr>
+<tr><td style="padding:9px 13px">6</td><td style="padding:9px 13px">주요 환경별 딥링크 동작 테스트</td><td style="padding:9px 13px">마케터 + 개발팀</td></tr>
+</tbody>
+</table>
+
+<h2 style="font-size:19px;font-weight:700;margin:32px 0 16px;padding-top:20px;border-top:1px solid #e2e4ea">마무리</h2>
+<p>딥링크는 앱 마케팅의 기본이자 핵심입니다. 정리하면:</p>
+<ul style="margin:12px 0 12px 20px">
+  <li><strong>URI 스킴</strong> — 가장 기본적이지만 스킴값 중복 문제가 있음</li>
+  <li><strong>유니버셜 링크(iOS) / 앱링크(Android)</strong> — 도메인 기반으로 중복 문제 해결, 하지만 모든 앱에서 동작하진 않음</li>
+  <li><strong>결론</strong> — 세 가지 방식을 모두 적용해 상호 보완적으로 사용하는 것이 최선</li>
+</ul>
+<p>디파이너리의 <strong>All-Link</strong>는 이 세 가지를 하나의 트래킹 링크로 통합해, 어떤 환경에서든 끊김 없는 딥링크 경험을 제공합니다. 광고 UX 최적화와 정확한 어트리뷰션을 동시에 잡고 싶다면, 디파이너리 All-Link를 활용해보세요.</p>
+
+<div style="margin-top:48px;text-align:center;">
+  <a href="https://salesmap.kr/web-form/9216b751-f1dd-461b-aefa-a125920c2f43" target="_blank" style="display:inline-block;background:#4f5adb;color:#fff;padding:12px 28px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;margin:6px;">👉 디파이너리 도입 문의하기</a>
+  <a href="https://help.dfinery.io/hc/ko/articles/360039757433" target="_blank" style="display:inline-block;background:#f0f1f5;color:#1a1d27;padding:12px 28px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;margin:6px;border:1px solid #e2e4ea">📖 헬프센터 원문 보기</a>
+</div>
+
+</div>

@@ -1,0 +1,492 @@
+export const PrivacyContent = () => {
+  return (
+    <>
+      <h2 className="text-heading3 mb-6">주식회사 아이지에이웍스 개인정보처리방침</h2>
+      <p className="text-body2 mb-8">
+        주식회사 아이지에이웍스(이하 '아이지에이웍스'라 함)는 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여 적법하게 개인정보를 처리하고
+        안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한
+        고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
+      </p>
+
+      {/* 제1조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제1조 (정의, 목적 및 적용 범위)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>
+          본 개인정보처리방침에 사용된 용어는 아래에 정의된 의미를 가집니다.
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>"개인정보"는 「개인정보 보호법」 제2조 제1호에 따라 개인정보로 인정되는 정보를 의미합니다.</li>
+            <li>"비식별정보"는 개인을 식별할 수 없도록 처리되었거나 다른 정보와 쉽게 결합하여 개인을 식별할 수 없는 비개인정보를 의미합니다. 이 경우 쉽게 결합할 수 있는지 여부는 다른 정보의 입수 가능성 등 개인을 알아보는 데 소요되는 시간, 비용, 기술 등을 합리적으로 고려하여 판단합니다.</li>
+            <li>여기에 별도로 정의되지 아니한 용어는 「개인정보 보호법」, 같은 법 시행령 및 시행규칙, 「개인정보의 안전성 확보조치 기준」 및 「표준 개인정보 보호지침」 등에 정의된 바에 따릅니다.</li>
+          </ul>
+        </li>
+        <li>본 개인정보처리방침은 개인정보의 수집, 이용, 처리 등의 절차 및 기준을 안내하는데 그 목적이 있습니다.</li>
+        <li>본 개인정보처리방침은 개인정보에 대하여 적용됩니다. 단, 일부 비식별정보의 경우 아이지에이웍스의 정보 보호 정책에 따라 본 개인정보처리방침에서 정한 절차 및 기준이 적용됩니다.</li>
+        <li>
+          아이지에이웍스는 다음의 목적을 위하여 최소한의 개인정보를 수집하여 처리하며, 정보주체의 사생활을 현저히 침해할 우려가 있는 민감정보(사상, 신념, 노동조합, 정당의 가입/탈퇴, 정치적 견해, 건강, 성생활 등에 관한 정보 등)는 수집하지 않습니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 정보주체의 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 문의 내용 확인 및 상담<br/>이용자의 문의사항 확인, 본인(법인/개인) 식별·인증, 문의·상담 내역 기록 및 관리, 서비스 관련 안내 및 답변 제공, 처리 결과 통보 목적으로 개인정보를 처리합니다.</li>
+            <li>나) 회원가입 및 회원정보 관리<br/>회원 가입의사 확인, 회원제 서비스 제공에 따른 본인(법인/개인) 식별·인증, 회원자격 유지·관리, 서비스 부정이용 방지, 만14세 미만 아동의 개인정보 처리 시 법정대리인의 동의여부 확인, 각종 고지·통지, 고충처리 목적으로 개인정보를 처리합니다</li>
+            <li>다) 재화 또는 서비스 제공 및 민원 접수, 처리 결과 통보 등 민원 사무 처리<br/>서비스(DFINERY, MOBILEINDEX, TV INDEX, FIXFOLIO)제공, 계약서 발송 및 체결, 민원인의 신원 확인, 민원사항 확인, 사실조사를 위한 연락·통지, 처리결과 통보 목적으로 개인정보를 처리합니다.</li>
+            <li>라) 요금 정산 처리<br/>아이지에이웍스가 이용자에게 제공한 서비스(DFINERY, MOBILEINDEX, TV INDEX, FIXFOLIO) 이용 요금을 정산하기 위한 목적으로 개인정보를 처리합니다.</li>
+            <li>마) 서비스에의 활용<br/>아이지에이웍스는 DFINERY 솔루션을 통한 광고성과의 측정 및 분석, CRM 메시지 발송 등의 서비스를 제공하기 위한 목적으로 개인정보 및 회원사 서비스 이용자의 데이터를 처리합니다.</li>
+            <li>바) 마케팅 및 광고에의 활용<br/>신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공, 인구통계학적 특성에 따른 서비스 제공 및 광고 게재, 서비스의 유효성 확인, 접속빈도 파악 또는 회원의 서비스 이용에 대한 통계, 이용자의 관심 및 성향에 기반한 개인맞춤형 상품 추천 서비스(광고 포함) 등을 목적으로 개인정보를 처리합니다.</li>
+          </ul>
+        </li>
+      </ol>
+
+      {/* 제2조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제2조 (개인정보의 처리목적, 수집항목, 보유기간)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>아이지에이웍스는 법령에 따른 개인정보 보유 · 이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유·이용기간 내에서 개인정보를 처리 · 보유합니다.</li>
+        <li>
+          각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.
+          <p className="font-medium mt-3 mb-2">가) 관계법령에 의한 경우</p>
+          <div className="overflow-x-auto mt-3">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center">근거 법령</th>
+                  <th className="border border-border px-3 py-2 text-center">항목</th>
+                  <th className="border border-border px-3 py-2 text-center">보유기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2" rowSpan={2}>통신비밀보호법</td><td className="border border-border px-3 py-2">서비스 이용기록, 접속기록, 접속IP정보</td><td className="border border-border px-3 py-2">3개월</td></tr>
+                <tr><td className="border border-border px-3 py-2">그 외의 통신사실확인자료 (가입자 전기통신일시, 개시/종료시간, 상대방 가입자번호, 사용도수, 발신기지국 위치추적자료)</td><td className="border border-border px-3 py-2">12개월</td></tr>
+                <tr><td className="border border-border px-3 py-2" rowSpan={4}>전자상거래 등에서의 소비자 보호에 관한 법률</td><td className="border border-border px-3 py-2">표시 / 광고에 관한 기록</td><td className="border border-border px-3 py-2">6개월</td></tr>
+                <tr><td className="border border-border px-3 py-2">계약 또는 청약철회 등에 관한 기록</td><td className="border border-border px-3 py-2">5년</td></tr>
+                <tr><td className="border border-border px-3 py-2">대금결제 및 재화 등의 공급에 관한 기록</td><td className="border border-border px-3 py-2">5년</td></tr>
+                <tr><td className="border border-border px-3 py-2">소비자의 불만 또는 분쟁처리에 관한 기록</td><td className="border border-border px-3 py-2">3년</td></tr>
+                <tr><td className="border border-border px-3 py-2">국세기본법· 부가가치세법 등</td><td className="border border-border px-3 py-2">거래에 관한 장부 및 증빙 서류</td><td className="border border-border px-3 py-2">5년</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="font-medium mt-6 mb-2">나) 회사 내부 방침에 의한 경우</p>
+          <p className="text-body2 mb-3">관련 법령에 따라 정보의 보존 기간이 정해진 경우가 아니면 회사가 정한 내부 방침에 따라 개인정보를 처리하고 보유합니다.</p>
+
+          {/* 나-1) 문의 내용 확인 및 상담 */}
+          <p className="font-medium mt-4 mb-2">1) 문의 내용 확인 및 상담</p>
+          <div className="overflow-x-auto mt-2">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center">수집항목</th>
+                  <th className="border border-border px-3 py-2 text-center">보유기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2">(필수) 성명, 이메일, 회사명, 연락처, 담당 부서명</td><td className="border border-border px-3 py-2">수집 및 이용 목적이 달성될 때까지 단, 소비자의 불만 및 분쟁처리 기록은 최소 3년간 보관</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 나-2) 회원가입 및 회원정보 관리 */}
+          <p className="font-medium mt-4 mb-2">2) 회원가입 및 회원정보 관리</p>
+          <div className="overflow-x-auto mt-2">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center">구분</th>
+                  <th className="border border-border px-3 py-2 text-center">수집항목</th>
+                  <th className="border border-border px-3 py-2 text-center">보유기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2">홈페이지 회원가입</td><td className="border border-border px-3 py-2">(필수) 성명, 이메일, 연락처, 회사업종</td><td className="border border-border px-3 py-2" rowSpan={2}>회원 탈퇴 또는 서비스 이용계약 종료 시까지.</td></tr>
+                <tr><td className="border border-border px-3 py-2">간편가입 및 로그인</td><td className="border border-border px-3 py-2">(필수) 구글(이름, 이메일, 프로필 사진, CI 연계정보)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 나-3) 재화/서비스 제공 및 민원 사무 처리 */}
+          <p className="font-medium mt-4 mb-2">3) 재화/서비스 제공 및 민원 사무 처리</p>
+          <div className="overflow-x-auto mt-2">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center">수집항목</th>
+                  <th className="border border-border px-3 py-2 text-center">보유기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2">(필수) 성명, 이메일, 전화번호, 회사명 또는 팀명 (선택) 직책</td><td className="border border-border px-3 py-2">회원 탈퇴 또는 서비스 이용계약 종료 시까지.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 나-4) 요금 정산 처리 */}
+          <p className="font-medium mt-4 mb-2">4) 요금 정산 처리</p>
+          <div className="overflow-x-auto mt-2">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center" colSpan={2}>구분</th>
+                  <th className="border border-border px-3 py-2 text-center">수집항목</th>
+                  <th className="border border-border px-3 py-2 text-center">보유기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2" colSpan={2}>카드결제</td><td className="border border-border px-3 py-2">(필수) 성명, 연락처</td><td className="border border-border px-3 py-2" rowSpan={3}>회원 탈퇴 또는 서비스 이용 계약 종료 시까지</td></tr>
+                <tr><td className="border border-border px-3 py-2" rowSpan={2}>현금결제</td><td className="border border-border px-3 py-2">법인</td><td className="border border-border px-3 py-2">(필수) 사업자등록증, 사업자명, 담당자명, 연락처, 회사주소, 이메일</td></tr>
+                <tr><td className="border border-border px-3 py-2">개인</td><td className="border border-border px-3 py-2">(필수) 사업자등록증, 사업명, 연락처, 이메일</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 나-5) 서비스 활용 데이터 */}
+          <p className="font-medium mt-4 mb-2">5) 서비스 활용 데이터</p>
+          <p className="text-body2 mb-2">아이지에이웍스는 디파이너리 &amp; 애드브릭스 서비스 제공과 관련하여 디파이너리 &amp; 애드브릭스 회원사가 이용자의 모바일 디바이스로부터 수집하거나 회원사를 통해 제공받는 서비스 활용 데이터를 아이지에이웍스가 정한 방침에 따라 처리하고 보유합니다. 단, 서비스 활용 데이터의 처리에 관하여 아이지에이웍스와 회원사가 그 처리 방식 및 절차, 기준 등을 별도 서면으로 정한 경우에는 그러한 내용이 본 개인정보처리방침 보다 우선하여 적용될 수 있습니다.</p>
+          <div className="overflow-x-auto mt-2">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center">서비스</th>
+                  <th className="border border-border px-3 py-2 text-center">수집항목</th>
+                  <th className="border border-border px-3 py-2 text-center">보유기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2">디파이너리 (DFINERY) &amp; 애드브릭스 (adbrix)</td><td className="border border-border px-3 py-2">아래 항목을 포함하되 이에 국한되지 않습니다<br/>- 광고식별값(ADID, IDFA), 플랫폼 정보(Android, iOS), 어트리뷰션 시 "광고 매체 파트너" 정보, IP주소, 이용 네트워크(3G, wifi), 디바이스 모델명/제조사명/해상도, 디바이스 통신사명, 디바이스 설정 언어/국가, 마켓 인스톨러 데이터</td><td className="border border-border px-3 py-2">서비스 이용계약 종료 후 30일까지</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 나-6) 맞춤 콘텐츠 / 마케팅 / 광고에의 활용 */}
+          <p className="font-medium mt-4 mb-2">6) 맞춤 콘텐츠 / 마케팅 / 광고에의 활용</p>
+          <p className="text-body2">IP주소, 쿠키, 방문접속기록, 서비스 이용기록, 구매 및 결제기록, 불량 이용기록, 기기정보의 행태정보는 서비스 이용 시 자동으로 생성되어 수집되는 개인정보로 아이지에이웍스는 정보주체의 동의 철회 또는 회원 탈퇴 시까지, 소비자의 불만·분쟁처리 기록은 최소 3년간 해당 개인정보를 보유합니다.</p>
+        </li>
+        <li>
+          전 항의 내용에도 불구하고 아이지에이웍스는 다음 각 호의 사유에 해당하는 경우에 해당 사유 종료시까지 개인정보를 처리 · 보유합니다.
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 개별적으로 정보주체에게 보유기간에 대한 동의를 받은 경우</li>
+            <li>나) 관계 법령 위반에 따라 공공기관을 통해 수사, 조사 등이 진행 중인 경우</li>
+            <li>다) 아이지에이웍스와 이용자간 서비스 이용이 종료되었음에도 채권 · 채무관계가 잔존 중인 경우</li>
+            <li>라) 아이지에이웍스와 이용자간 민원, 소송 등 분쟁이 발생한 경우</li>
+          </ul>
+        </li>
+      </ol>
+
+      {/* 제3조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제3조 (개인정보의 제3자 제공)</h2>
+      <p className="text-body2 mb-4">아이지에이웍스는 정보주체의 개인정보를 처리 목적으로 명시한 범위를 초과하여 제3자에게 제공하지 않습니다. 다만, 아이지에이웍스는 「개인정보 보호법」 제18조 제2항, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 제63조, 「통신비밀보호법」 제13조, 「전자상거래 등에서의 소비자보호에 관한 법률」 제6조, 「국세기본법」 제85조의3 등 다른 법령에 특별한 규정이 있는 경우 또는 재난, 감염병 등 긴급상황 발생 시 법률에서 규정한 적법한 절차에 따라 정보주체의 개인정보를 동의 없이 제공할 수 있습니다. 이 경우 근거법령에 의거하여 최소한의 개인정보만을 제공하고, 목적과 다르게 제공하지 않습니다.</p>
+      <div className="overflow-x-auto mt-3">
+        <table className="w-full text-sm border-collapse border border-border">
+          <thead>
+            <tr className="bg-muted">
+              <th className="border border-border px-3 py-2 text-center w-[120px]">제공받은 대상<br/>(제3자)</th>
+              <th className="border border-border px-3 py-2 text-center w-[180px]">목적</th>
+              <th className="border border-border px-3 py-2 text-center w-[140px]">제공정보</th>
+              <th className="border border-border px-3 py-2 text-center">제공받는 자의 보유기간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-border px-3 py-2">한국인터넷진흥원</td>
+              <td className="border border-border px-3 py-2">스팸신고자 정보제공 및 이용제한 업무 처리</td>
+              <td className="border border-border px-3 py-2">- 스팸 신고된 고객명<br/>- 생년월일<br/>- 사업자등록번호<br/>- 전화번호</td>
+              <td className="border border-border px-3 py-2">정보 제공일부터 서비스 해지 또는 제공 계약 종료일 중 먼저 도래하는 시점 까지 이용 하며, 이용 기간이 종료 한 시점에 파기. 단 ,다른 법령에 특별한 규정이 있을 경우 관련 법령에 따라 보관.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* 제4조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제4조 (개인정보 처리 위탁)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>
+          아이지에이웍스는 원활한 서비스 제공을 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있으며, 위탁업무의 내용이나 수탁기관이 변경될 경우 아이지에이웍스는 본 개인정보 처리방침을 통하여 공개합니다.
+          <div className="overflow-x-auto mt-3">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center">위탁사업명 및 처리업무의 내용</th>
+                  <th className="border border-border px-3 py-2 text-center">수탁기관 및 연락처</th>
+                  <th className="border border-border px-3 py-2 text-center">보유 및 이용기간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2">데이터 보관 / 전산시스템 운용, 관리</td><td className="border border-border px-3 py-2">- 업체명 : Amazon Web Service<br/>- 연락처 : aws-korea-privacy@amazon.com</td><td className="border border-border px-3 py-2" rowSpan={8}>위탁 사업 종료 또는 위탁업무 목적 달성 후 즉시 파기</td></tr>
+                <tr><td className="border border-border px-3 py-2">홈페이지 이용자 통계 및 서비스 개선</td><td className="border border-border px-3 py-2">- 업체명 : Google<br/>- 연락처 : googlekrsupport@google.com</td></tr>
+                <tr><td className="border border-border px-3 py-2">CRM(Customer Relationship Management) 솔루션</td><td className="border border-border px-3 py-2">- 업체명 : Pipedrive<br/>- 연락처 : privacy@pipedrive.com</td></tr>
+                <tr><td className="border border-border px-3 py-2">고객응대</td><td className="border border-border px-3 py-2">- 업체명 : Zendesk<br/>- 연락처 : privacy@zendesk.com</td></tr>
+                <tr><td className="border border-border px-3 py-2">디파이너리(DFINERY) 이용대금 정산</td><td className="border border-border px-3 py-2">- 업체명 : ㈜스텝페이<br/>- 연락처 : contact@steppay.kr</td></tr>
+                <tr><td className="border border-border px-3 py-2">카카오톡 비즈메시지 발송 (알림톡, 친구톡)</td><td className="border border-border px-3 py-2">- 업체명 : ㈜카카오<br/>- 연락처 : 카카오 고객센터 1577-3754 (유료)</td></tr>
+                <tr><td className="border border-border px-3 py-2">모바일인덱스 이용대금 정산</td><td className="border border-border px-3 py-2">- 업체명 : ㈜다날<br/>- 연락처 : help@danal.co.kr</td></tr>
+                <tr><td className="border border-border px-3 py-2">FIXFOLIO 이용대금 결제 연동 서비스</td><td className="border border-border px-3 py-2">- 업체명 : 주식회사 코리아포트원<br/>- 연락처 : security@portone.io</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>
+          아이지에이웍스는 임직원의 근로관계 설정 및 유지, 인사관리를 위하여 다음과 같이 임직원 개인정보 처리업무를 위탁하고 있으며, 위탁 업무의 내용이나 수탁기관은 아래 [임직원 개인정보 처리 위탁 현황]을 통해 공개합니다.
+          <p className="mt-2">
+            <a href="https://www.notion.so/igaw/Happy-Life-Guide-f511242df8d9413f933867661cc9e438?p=1206ad94983b8058b3d5fb5a04078385&pm=s" target="_blank" rel="noopener noreferrer" className="text-primary underline">[임직원 개인정보 처리 위탁 현황]</a>
+          </p>
+        </li>
+        <li>
+          아이지에이웍스는 위탁계약 체결 시 「개인정보 보호법」 제26조에 따라, 다음 각 호의 내용이 포함되도록 계약서 등 문서로 명시하고 있습니다.
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 위탁업무 수행 목적 외 개인정보처리 금지에 관한 사항</li>
+            <li>나) 개인정보의 기술적·관리적 보호조치에 관한 사항</li>
+            <li>다) 재위탁 제한에 관한 사항</li>
+            <li>라) 개인정보의 관리 현황 점검 및 수탁자의 교육에 관한 사항</li>
+            <li>마) 수탁자 의무 위반 시 손해배상 등 책임에 관한 사항</li>
+          </ul>
+        </li>
+      </ol>
+
+      {/* 제4조의2 */}
+      <h2 className="text-heading3 mt-12 mb-4">제4조의2 (개인정보의 재위탁)</h2>
+      <p className="text-body2">아이지에이웍스는 재화 또는 서비스 제공을 위하여 위탁받은 개인정보의 처리 업무의 전부 또는 일부를 제4조에 명시된 수탁기관 및 제3자에게 재위탁 할 수 있으며, 이 경우 아이지에이웍스는 「개인정보 보호법」 제26조 제2항에 따라 위탁자로부터 사전 동의를 받습니다.</p>
+
+      {/* 제5조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제5조 (개인정보의 국외 이전)</h2>
+      <p className="text-body2 mb-4">아이지에이웍스는 정보주체의 개인정보를 국외의 다른 사업자에게 제공하지 않습니다. 다만, 정보통신서비스의 제공에 관한 계약 이행 및 이용자 편의 증진 등을 위하여 클라우드 서버를 사용함에 따라 다음과 같이 개인정보 처리업무를 국외에 전송하고 있습니다. 이에 「개인정보 보호법」 제39조의12에 따라 아래와 같이 고지합니다.</p>
+      <div className="overflow-x-auto mt-3">
+        <table className="w-full text-sm border-collapse border border-border">
+          <thead>
+            <tr className="bg-muted">
+              <th className="border border-border px-3 py-2 text-center" rowSpan={2}></th>
+              <th className="border border-border px-3 py-2 text-center" colSpan={3}>이전 받는 대상(클라우드 서비스 제공자)</th>
+            </tr>
+            <tr className="bg-muted">
+              <th className="border border-border px-3 py-2 text-center">구글 (Google)</th>
+              <th className="border border-border px-3 py-2 text-center">파이프드라이브 (Pipedrive)</th>
+              <th className="border border-border px-3 py-2 text-center">젠데스크 (Zendesk)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td className="border border-border px-3 py-2 bg-muted font-medium">이전국가</td><td className="border border-border px-3 py-2 text-center" colSpan={3}>미국</td></tr>
+            <tr><td className="border border-border px-3 py-2 bg-muted font-medium">이전일시 및 방법</td><td className="border border-border px-3 py-2 text-center" colSpan={3}>서비스 도입 등 기타 문의 신청이 완료되면 클라우드에 보관</td></tr>
+            <tr><td className="border border-border px-3 py-2 bg-muted font-medium">정보관리책임자 연락처</td><td className="border border-border px-3 py-2">googlekrsupport@google.com</td><td className="border border-border px-3 py-2">privacy@pipedrive.com</td><td className="border border-border px-3 py-2">privacy@zendesk.com</td></tr>
+            <tr><td className="border border-border px-3 py-2 bg-muted font-medium">이전 목적</td><td className="border border-border px-3 py-2">홈페이지 이용자 분석 플랫폼 이용</td><td className="border border-border px-3 py-2">CRM 플랫폼 이용</td><td className="border border-border px-3 py-2">고객문의처리 플랫폼 이용</td></tr>
+            <tr><td className="border border-border px-3 py-2 bg-muted font-medium">이전정보 항목</td><td className="border border-border px-3 py-2">방문일시, 서비스 이용기록, 접속 IP정보, 쿠키</td><td className="border border-border px-3 py-2" colSpan={2}>회사명 및 담당자 정보 (성명, 이메일, 휴대전화번호, 부서, 직함)</td></tr>
+            <tr><td className="border border-border px-3 py-2 bg-muted font-medium">이전 받는 자의 개인정보 보유기간</td><td className="border border-border px-3 py-2 text-center" colSpan={3}>개인정보 처리방침 제2조에 따름</td></tr>
+            <tr><td className="border border-border px-3 py-2 bg-muted font-medium">기타</td><td className="border border-border px-3 py-2" colSpan={3}>아이지에이웍스는 클라우드 서비스 제공자의 정보보호 및 개인정보보호 준수 현황을 면밀하게 검토한 이후 클라우드 서비스를 이용하고 있으며 클라우드 서비스 제공자는 아이지에이웍스 정보에 접근할 수 없습니다.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* 제6조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제6조 (정보주체의 권리 및 행사 절차)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>정보주체(만 14세의 경우에는 법정대리인을 말함)는 아이지에이웍스에 대해 언제든지 개인정보 열람, 정정·삭제, 처리정지 요구 등의 권리를 행사할 수 있습니다.</li>
+        <li>
+          아이지에이웍스가 보유하고 있는 개인정보에 대하여 「개인정보 보호법」 제35조에 따라 자신의 개인정보에 대한 열람을 요구할 수 있습니다. 다만, 개인정보 열람 요구 시 「개인정보 보호법」 제35조 제4항에 따라 아래의 경우 열람을 제한할 수 있습니다.
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 법률에 따라 열람이 금지되거나 제한되는 경우</li>
+            <li>나) 다른 사람의 생명ㆍ신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우</li>
+            <li>다) 공공기관이 다음 각 목의 어느 하나에 해당하는 업무를 수행할 때 중대한 지장을 초래하는 경우
+              <ul className="list-none pl-5 mt-1 space-y-1">
+                <li>1)조세의 부과ㆍ징수 또는 환급에 관한 업무</li>
+                <li>2)「초ㆍ중등교육법」 및 「고등교육법」에 따른 각급 학교, 「평생교육법」에 따른 평생교육시설, 그 밖의 다른 법률에 따라 설치된 고등교육기관에서의 성적 평가 또는 입학자 선발에 관한 업무</li>
+                <li>3)학력ㆍ기능 및 채용에 관한 시험, 자격 심사에 관한 업무</li>
+                <li>4)보상금ㆍ급부금 산정 등에 대하여 진행 중인 평가 또는 판단에 관한 업무</li>
+                <li>5)다른 법률에 따라 진행 중인 감사 및 조사에 관한 업무</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>정보주체는 개인정보를 직접 정정ㆍ삭제하거나 「개인정보 보호법」 제36조 및 동법 시행령 제43조에 따라 아이지에이웍스에게 정보주체의 개인정보를 정정ㆍ삭제를 요구할 수 있습니다. 다만, 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</li>
+        <li>
+          아이지에이웍스가 보유하고 있는 개인정보에 대하여 「개인정보 보호법」 제37조에 따라 처리정지를 요구할 수 있습니다. 다만, 아래의 경우 법 제37조 제2항에 의하여 처리정지 요구를 거절할 수 있습니다.
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+            <li>나) 다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우</li>
+            <li>다) 공공기관이 개인정보를 처리하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 경우</li>
+            <li>라) 개인정보를 처리하지 아니하면 정보주체와 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 정보주체가 그 계약의 해지 의사를 명확하게 밝히지 아니한 경우</li>
+          </ul>
+        </li>
+        <li>제1항에 따른 정보주체의 권리 행사는 「개인정보 보호법」 시행규칙 별지 제8호 서식에 따라 개인정보(열람, 정정·삭제, 처리정지) 요구서를 작성한 후 서면, 전화, 전자우편, 모사전송(FAX)을 통하여 하실 수 있으며, 아이지에이웍스는 요구를 받은 날부터 빠른 시일 내에 조치하도록 하겠습니다.</li>
+        <li>제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 「개인정보 보호법」 시행규칙 별지 제11호 서식에 따른 위임장을 제출하여야 합니다</li>
+        <li>아이지에이웍스는 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인할 수 있으며, 만일 열람을 거절하거나 정정ㆍ삭제ㆍ처리정지 요구에 따르지 아니한 경우에도 그 사실 및 이유와 이의제기 방법을 해당 정보주체에게 통지하도록 하겠습니다</li>
+      </ol>
+
+      {/* 제7조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제7조 (개인정보의 파기)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>아이지에이웍스는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</li>
+        <li>
+          개인정보 파기의 절차 및 방법은 다음과 같습니다.
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 파기절차<br/>아이지에이웍스는 파기 사유가 발생한 개인정보(또는 개인정보파일)을 개인정보를 선정하고, 아이지에이웍스는 개인정보 보호책임자의 승인을 받아 개인정보를 파기합니다.</li>
+            <li>나) 파기방법<br/>전자적 파일 형태로 기록·저장된 개인정보는 기록을 재생할 수 없도록 파기하며, 종이 문서에 기록·저장된 개인정보는 분쇄기로 분쇄하거나 소각하는 등의 방법으로 파기합니다.</li>
+            <li>다) 분리보관<br/>다만, 다른 법령에 따라 일정 기간 보존이 필요한 개인정보는 해당 법령에 근거하여 별도로 보관합니다. 이 경우 해당 개인정보는 일반 개인정보와 분리하여 저장·관리하며, 보존기간이 경과한 후 즉시 파기합니다.</li>
+          </ul>
+        </li>
+      </ol>
+
+      {/* 제8조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제8조 (가명정보의 처리)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>아이지에이웍스는 「개인정보 보호법」 제28조의2, 제28조의3에 근거하여 가명정보(개인정보의 일부를 삭제하거나 일부 또는 전부를 대체하는 등의 방법으로 추가 정보 없이는 특정 개인을 알아볼 수 없도록 처리한 정보)를 처리합니다.</li>
+        <li>아이지에이웍스는 가명정보를 통계작성, 과학적 연구, 공익적 기록 보존 및 정책 개발 등의 목적으로 처리하며 이 때 가명정보가 재식별되지 않도록 분리하여 별도 저장, 관리하고 처리 및 보유기간 경과 시 해당 정보를 즉시 파기합니다.</li>
+        <li>아이지에이웍스는 가명정보를 제3자에게 제공하는 경우, 업무 처리 목적에 필요한 최소한의 가명정보를 제공합니다. 이 경우 가명정보 재식별 금지, 가명정보 및 추가정보의 분리 보관, 임직원 교육 등 안정성 확보를 위한 준수사항이 반영된 계약서를 사용하여 계약을 체결하고 있습니다.</li>
+        <li>아이지에이웍스는 가명정보 처리 업무를 위탁하는 경우, 위탁하는 업무의 내용이나 수탁기관 등을 이용자가 확인할 수 있도록 아이지에이웍스 홈페이지에 게시하며, 업무의 내용이나 수탁기관이 변경되는 경우에도 동일한 방법으로 통지합니다. 위탁계약 시 위탁 목적 외 가명처리 금지, 재식별 금지 등 안전한 관리를 위해 필요한 준수사항이 반영된 계약을 체결하고 있으며, 수탁기관이 안전하게 가명정보를 처리하고 있는지에 대해 관리•감독 및 교육을 실시하고 있습니다</li>
+      </ol>
+
+      {/* 제9조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제9조 (개인정보의 안전성 확보 조치)</h2>
+      <p className="text-body2 mb-4">아이지에이웍스는 「개인정보 보호법」 제29조 및 개인정보 보호위원회 고시 「개인정보의 안전성 확보조치 기준」에 따라 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다. 단, 정보주체 개인의 부주의나 기본적인 인터넷의 위험성 때문에 일어나는 일들에 대해서는 아이지에이웍스는 책임을 지지 않습니다.</p>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>
+          기술적 조치
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 취급하는 개인정보는 비밀번호에 의해 보호되며, 파일 및 전송 데이터를 암호화하거나 파일 잠금 기능(Lock)을 사용하여 중요한 데이터는 별도의 보안기능을 통해 보호되고 있습니다.</li>
+            <li>나) 백신프로그램을 이용하여 컴퓨터 바이러스에 의한 피해를 방지하기 위한 조치를 취하고 있습니다. 백신프로그램은 주기적으로 업데이트 되며 갑작스러운 바이러스가 출현할 경우 백신이 나오는 즉시 이를 적용함으로써 개인정보가 침해되는 것을 방지하고 있습니다.</li>
+            <li>다) 암호화 응용프로그램을 설치하여 네트워크 상에 개인정보 및 개인인증 정보를 안전하게 전송할 수 있는 보안장치를 채택하고 있습니다.</li>
+            <li>라) 해킹 등 외부침입에 대비하여 침입차단시스템 및 취약점 분석시스템 등을 이용하여 보안에 만전을 기하고 있습니다.</li>
+          </ul>
+        </li>
+        <li>
+          관리적 조치
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 개인정보 접근 권한의 인원을 ① 이용자를 직접 상대로 하여 업무를 수행하는 자, ② 업무 담당자 및 상담업무를 수행하는 자, ③ 기타 업무상 개인정보의 취급이 불가피한 자로 한정합니다.</li>
+            <li>나) 개인정보를 취급하는 직원을 대상으로 새로운 보안 기술 습득 및 개인정보 보호 의무 등에 관해 정기적인 사내 교육 및 외부 위탁교육을 실시하고 있습니다.</li>
+            <li>다) 전 직원은 입·퇴사 시 정보 보호 서약서 작성을 통하여 사람에 의한 정보유출을 사전에 방지하고 개인정보 처리방침에 대한 이행사항 및 직원의 준수여부를 감사하기 위한 내부절차를 마련하고 있습니다.</li>
+            <li>라) 개인정보 관련 취급자의 업무 인수인계는 보안이 유지된 상태에서 철저하게 이뤄지고 있으며 입사 및 퇴사 후 개인정보 사고에 대한 책임을 명확히 하고 있습니다.</li>
+            <li>마) 아이지에이웍스는 3개월 단위로 비밀번호를 재설정 하도록 조치할 수 있고, 정보주체는 해당 기간 단위로 비밀번호를 재설정할 수 있습니다.</li>
+          </ul>
+        </li>
+        <li>
+          물리적 조치
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 외부인의 무단 출입을 방지하기 위하여 출입통제시스템을 운영합니다.</li>
+          </ul>
+        </li>
+      </ol>
+
+      {/* 제10조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제10조 (개인정보 자동 수집 장치의 설치•운영 및 그 거부에 관한 사항)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>
+          아이지에이웍스는 이용자에게 개별적인 웹사이트 맞춤서비스를 제공하기 위해 이용자의 이용정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다. 쿠키는 웹/모바일 사이트를 운영하는데 이용되는 서버(http)가 이용자의 웹/모바일 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) 쿠키의 사용 목적 : 이용자의 접속 빈도나 방문 시간, 이용 행태 등의 분석 목적으로 사용됩니다.</li>
+            <li>나) 쿠키의 설치 · 운영 및 거부 : 회원은 쿠키의 설치 · 운영 및 거부에 대한 선택권을 가짐에 따라 회원이 사용하는 웹 브라우저의 옵션을 설정하여 모든 쿠키를 허용하거나, 쿠키가 저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을 거부할 수 있습니다.</li>
+          </ul>
+        </li>
+        <li>
+          이용자는 쿠키를 통해 아이지에이웍스가 제공하는 개인 맞춤형 상품 추천서비스를 수신 거부하거나 기타 개인 맞춤 서비스를 차단할 수 있는 선택권을 다음과 같은 방법으로 행사할 수 있습니다. 해당 사항은 브라우저 쿠키와 모바일 기기의 설정을 기반으로 하기 때문에 이를 삭제 및 변경할 경우 모두 초기화됩니다.
+          <ul className="list-none pl-5 mt-2 space-y-1">
+            <li>가) Microsoft Edge : 설정 &gt; 쿠키 및 사이트 권한 / 개인정보, 검색 및 서비스</li>
+            <li>나) Chrome : 설정 &gt; 개인 정보 보호 및 보안</li>
+            <li>다) Safari : 설정 &gt; 개인정보 보호 &gt; 쿠키 및 웹사이트 데이터</li>
+            <li>라) Firefox : 설정 &gt; 개인정보 보호 &gt; 쿠키와 캐시</li>
+            <li>마) Android : 설정 &gt; 개인정보 보호 &gt; 광고 &gt; 광고 ID 재설정 또는 광고 ID 삭제</li>
+            <li>바) IOS : 설정 &gt; 개인정보 보호 및 보안 &gt; APPLE 광고 &gt; 개인 맞춤형 광고(OFF)</li>
+          </ul>
+          <p className="text-sm mt-2">※ 각 브라우저 및 모바일 OS 버전에 따라 메뉴 및 방법이 다소 상이할 수 있습니다.</p>
+        </li>
+      </ol>
+
+      {/* 제11조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제11조 (개인정보 보호책임자)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>
+          아이지에이웍스는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 부서별 개인정보 보호책임자를 지정하고 있습니다.
+          <div className="overflow-x-auto mt-3">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center">구분</th>
+                  <th className="border border-border px-3 py-2 text-center">부서명</th>
+                  <th className="border border-border px-3 py-2 text-center">성명</th>
+                  <th className="border border-border px-3 py-2 text-center">연락처</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2 text-center">총괄 개인정보보호책임자</td><td className="border border-border px-3 py-2">기술이사</td><td className="border border-border px-3 py-2 text-center">박진우</td><td className="border border-border px-3 py-2" rowSpan={5}>privacy@igaworks.com</td></tr>
+                <tr><td className="border border-border px-3 py-2 text-center">총괄 개인정보보호담당자</td><td className="border border-border px-3 py-2">보안팀</td><td className="border border-border px-3 py-2 text-center">예석환</td></tr>
+                <tr><td className="border border-border px-3 py-2 text-center" rowSpan={3}>분야별 개인정보보호담당자</td><td className="border border-border px-3 py-2">MI &amp; DMP</td><td className="border border-border px-3 py-2 text-center">성석주</td></tr>
+                <tr><td className="border border-border px-3 py-2">디파이너리 &amp; 애드브릭스</td><td className="border border-border px-3 py-2 text-center">김일기</td></tr>
+                <tr><td className="border border-border px-3 py-2">FIXFOLIO</td><td className="border border-border px-3 py-2 text-center">현동규</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>정보주체께서는 아이지에이웍스의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 각 분야별 개인정보 보호책임자에게 문의하실 수 있습니다. 아이지에이웍스는 정보주체의 문의에 대해 지체 없이 답변 및 처리되도록 노력하겠습니다.</li>
+      </ol>
+
+      {/* 제12조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제12조 (정보주체의 권리행사 문의 및 처리 절차 안내)</h2>
+      <ol className="list-decimal pl-5 space-y-3 text-body2">
+        <li>
+          정보주체는 아이지에이웍스에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다. 권리 행사는 아래의 E-Mail을 통해 하실 수 있으며, 아이지에이웍스는 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.
+          <div className="overflow-x-auto mt-3">
+            <table className="w-full text-sm border-collapse border border-border">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="border border-border px-3 py-2 text-center">개인정보 열람청구 문의 E-Mail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="border border-border px-3 py-2 !text-center">contact@igaworks.com</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>개인정보 열람 및 처리정지 요구는 「개인정보 보호법」 제35조 제4항, 제37조 제2항에 의하여 정보주체의 권리가 제한될 수 있습니다.</li>
+        <li>개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그러한 권리 행사가 제한될 수 있습니다.</li>
+        <li>아이지에이웍스는 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지 확인하기 위하여 신분증, 위임장 제출을 요청할 수 있습니다.</li>
+      </ol>
+
+      {/* 제13조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제13조 (권익침해 구제방법)</h2>
+      <p className="text-body2 mb-4">정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다. &lt;아래의 기관은 아이지에이웍스와는 별개의 기관으로서, 아이지에이웍스의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다&gt;</p>
+      <div className="overflow-x-auto mt-3 mb-4">
+        <table className="w-full text-sm border-collapse border border-border">
+          <thead>
+            <tr className="bg-muted">
+              <th className="border border-border px-3 py-2 text-center">기관정보</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td className="border border-border px-3 py-2">
+              <p className="mb-2">개인정보 침해신고센터 (한국인터넷진흥원 운영)</p>
+              <p>소관업무 : 개인정보 침해사실 신고, 상담 신청</p>
+              <p>홈페이지 : <a href="http://privacy.kisa.or.kr" target="_blank" rel="noopener noreferrer" className="text-primary underline">http://privacy.kisa.or.kr</a></p>
+              <p>전화 : (국번없이) 118</p>
+              <p className="mb-4">주소 : (58324) 전남 나주시 진흥길 9 한국인터넷진흥원 개인정보침해신고센터</p>
+              <p className="mb-2">개인정보 분쟁조정위원회</p>
+              <p>소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)</p>
+              <p>- 홈페이지 : <a href="http://www.kopico.go.kr" target="_blank" rel="noopener noreferrer" className="text-primary underline">http://www.kopico.go.kr</a></p>
+              <p>전화 : 1833-6972</p>
+              <p className="mb-4">주소 : (03171) 서울시 종로구 세종대로 209 정부서울청사 12층</p>
+              <p>대검찰청 사이버범죄수사단 : (국번없이) 1301 cid@spo.go.kr (<a href="http://www.spo.go.kr" target="_blank" rel="noopener noreferrer" className="text-primary underline">www.spo.go.kr</a>)</p>
+              <p>경찰청 사이버범죄 신고시스템 : (국번없이) 182 (<a href="https://ecrm.police.go.kr" target="_blank" rel="noopener noreferrer" className="text-primary underline">ecrm.police.go.kr</a>)</p>
+            </td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* 제14조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제14조 (고지의 의무)</h2>
+      <p className="text-body2">아이지에이웍스는 정부의 정책 또는 보안 기술의 변경에 따라 본 개인정보 처리방침의 내용에 추가 ∙ 삭제 및 수정이 있을 경우 개정 7일 전부터 아이지에이웍스의 웹사이트, 앱 등의 온라인 수단을 이용하여 해당 내용을 고지합니다.</p>
+
+      {/* 제15조 */}
+      <h2 className="text-heading3 mt-12 mb-4">제15조 (개인정보 처리방침 변경)</h2>
+      <p className="text-body2">이 개인정보 처리방침은 2026년 2월 18일부터 적용됩니다. 이 전의 개인정보 처리방침은 아래에서 확인할 수 있습니다.</p>
+
+      {/* 부칙 */}
+      <h2 className="text-heading3 mt-12 mb-4">부칙</h2>
+      <p className="text-body2 mb-2">[이전 개인정보 처리방침]</p>
+      <ul className="list-disc pl-5 space-y-1 text-body2">
+        <li>시행일자 : 2016.05.20 ~ 2017.07.14 적용 <a href="/privacy/160520" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2017.07.15 ~ 2017.10.31 적용 <a href="/privacy/170715" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2017.11.01 ~ 2020.07.16 적용 <a href="/privacy/171101" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2020.07.17 ~ 2021.07.30 적용 <a href="/privacy/200717" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2021.08.01 ~ 2022.01.16 적용 <a href="/privacy/210801" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2022.01.17 ~ 2023.04.16 적용 <a href="/privacy/220117" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2023.04.16 ~ 2023.08.31 적용 <a href="/privacy/230417" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2023.09.01 ~ 2024.11.14 적용 <a href="/privacy/230901" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2024.11.15 ~ 2025.05.20 적용 <a href="/privacy/241115" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2025.05.21 ~ 2025.11.19 적용 <a href="/privacy/250520" className="text-primary underline">(클릭)</a></li>
+        <li>시행일자 : 2025.11.20 ~ 2026.02.17 적용 <a href="/privacy/251120" className="text-primary underline">(클릭)</a></li>
+      </ul>
+    </>
+  );
+};
+
+export default PrivacyContent;
